@@ -11,6 +11,7 @@ A modern desktop GUI utility built with Python and `customtkinter` to scan and c
   - AVD emulator cache and snapshots (`~/.android/avd`)
   - Kotlin Native / Konan cache (`~/.konan`)
   - Temporary Android/Gradle files in `%TEMP%` (on Windows)
+  - 
 - **Individual Android Studio Version Selection:** Detects Android Studio folders across cache, config, and log directories, marking the most recent one so you don't remove it by mistake.
 - **Project Build Folder Scanner:** Scans a chosen projects directory for `build/` and `.gradle/` folders, displays their sizes, and lets you select which ones to delete.
 - **Stop Gradle Daemon Button:** Runs `gradle --stop` (or `gradlew --stop` if available) before cleanup to release file locks.
@@ -25,10 +26,17 @@ A modern desktop GUI utility built with Python and `customtkinter` to scan and c
 1. Install dependencies:
    ```bash
    python -m pip install -r requirements.txt
+   
 Run the GUI application:Bashpython android_cleaner_premium.py
-Building the Windows Executable (.exe)Install PyInstaller:Bashpython -m pip install pyinstaller
+
+Building the Windows Executable (.exe)
+
+Install PyInstaller:Bashpython -m pip install pyinstaller
+
 Build the standalone .exe (with customtkinter assets bundled and no console window):Bashpython -m PyInstaller --onefile --windowed --clean --collect-all customtkinter --name "AndroidCleanerPro" android_cleaner_premium.py
+
 Find the compiled executable at dist/AndroidCleanerPro.exe.  
+
 Note: If pyinstaller is not recognized in your terminal, use python -m PyInstaller as shown above.
 Temporary build/, dist/, and AndroidCleanerPro.spec files are ignored by .gitignore.   
 
